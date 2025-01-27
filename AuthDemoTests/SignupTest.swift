@@ -27,8 +27,8 @@ class SignupTest: XCTestCase {
     func testValidFields() {
         viewModel.txtFullName = "John Doe"
         viewModel.txtEmail = "test@example.com"
-        viewModel.txtPassword = "Password123"
-        viewModel.txtConfirmPassword = "Password123"
+        viewModel.txtPassword = "Password@123"
+        viewModel.txtConfirmPassword = "Password@123"
         viewModel.txtGender = "Male"
         
         XCTAssertTrue(viewModel.isValidField, "Valid fields should return true.")
@@ -37,8 +37,8 @@ class SignupTest: XCTestCase {
     func testInvalidEmail() {
         viewModel.txtFullName = "John Doe"
         viewModel.txtEmail = "invalidEmail"
-        viewModel.txtPassword = "Password123"
-        viewModel.txtConfirmPassword = "Password123"
+        viewModel.txtPassword = "Password@123"
+        viewModel.txtConfirmPassword = "Password@123"
         viewModel.txtGender = "Male"
         
         XCTAssertFalse(viewModel.isValidField, "Invalid email should return false.")
@@ -47,7 +47,7 @@ class SignupTest: XCTestCase {
     func testMismatchedPasswords() {
         viewModel.txtFullName = "John Doe"
         viewModel.txtEmail = "test@example.com"
-        viewModel.txtPassword = "Password123"
+        viewModel.txtPassword = "Password@123"
         viewModel.txtConfirmPassword = "DifferentPassword123"
         viewModel.txtGender = "Male"
         
@@ -70,8 +70,8 @@ class SignupTest: XCTestCase {
         // Arrange
         viewModel.txtFullName = "John Doe"
         viewModel.txtEmail = "test@example.com"
-        viewModel.txtPassword = "Password123"
-        viewModel.txtConfirmPassword = "Password123"
+        viewModel.txtPassword = "Password@123"
+        viewModel.txtConfirmPassword = "Password@123"
         viewModel.txtGender = "Male"
         viewModel.isLoading = true
         

@@ -65,9 +65,9 @@ struct LoginView: View {
             
             CustomTextField(
                 binding: self.$viewModel.txtPassword,
-                placeHolder: "Enter your password*",
+                placeHolder: "Enter your password",
                 infos: [
-                    .init(position: .top, text: "Password")
+                    .init(position: .top, text: "Password*")
                 ],
                 isSecure: !self.viewModel.isShowPasswordText,
                 leftView: nil,
